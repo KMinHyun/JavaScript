@@ -24,8 +24,8 @@ const obj2 = {
 }
 
 console.log(obj2.userInfo.name); // 온점(.)을 이용해서 타고 들어감.
-obj2.userInfo.name = '깁슨';
-
+obj2.userInfo.name = '깁슨'; // <= 원본 데이터(obj1)을 덮어씌우기 때문에 조심해야 함.
+console.log(obj1.name);
 // Optional Chaining : '?.'을 기준으로 앞의 평가대상이 undefined거나 null이-
   // -아니면 처리를 계속 이어가고 undefined나 null이면 false를 반환하고 멈춘다.
   if(obj2.userInfo.rank) {
