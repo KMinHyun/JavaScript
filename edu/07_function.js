@@ -50,4 +50,4 @@ function myCheck(callback) {
   callback();
 }
 
-myCheck(() => console.log('콜백 함수')); // <= 익명 함수라고 함. 단발성으로 사용.
+myCheck(() => console.log('콜백 함수')); // <= 익명 함수라고 함. 단발성으로 사용(재호출이 안 되기 때문).
