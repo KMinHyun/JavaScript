@@ -6,7 +6,7 @@ Math.ceil(double); // 1이 결과값으로 나옴.
 Math.round(double); // 1.
 Math.floor(double); // 0.
 
-// random() : 0초과 1미만의 랜덤한 수를 반환함.
+// random() : 0이상 1미만의 랜덤한 수를 반환함. 단, 0은 나올 가능성만 있다고 보면 됨.
 let randomDouble = Math.random();
 // 1~10 난수를 구하려면?
 console.log(Math.ceil(randomDouble * 10));
