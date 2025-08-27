@@ -55,3 +55,28 @@ const p = document.querySelector('p');
 p.classList.add('test2'); // <= 새로운 클래스를 기존 클래스 뒤에 추가
 p.classList.remove('test2');
 p.classList.toggle('test3'); // <= 없는 클래스면 추가가 되고, 있는 클래스면 없어짐.
+
+//-----------------------------
+// 새로운 요소 생성
+//-----------------------------
+// 요소 생성
+const newH1 = document.createElement('h1');
+newH1.textContent = '새로운 요소다.';
+
+// 요소 넣기(부모 노드의 가장 마지막 자식 노드로 추가)
+  // ㄴ노드란? 요소를 말함. 데이터가 저장돼있는 위치.
+document.body.appendChild(newH1);
+
+// 요소 넣기(부모 노드의 자식 노드 중 특정 타겟 앞에 노드를 추가)
+const newH2 = document.createElement('h1');
+newH2.textContent = '새로운 요소다.'; // 여러 군데 넣으려면 새로운 객체를 생성해야 함.
+
+const childP = document.querySelector('p'); // <= 타겟 삼을 노드도 불러와야 함.
+document.body.insertBefore(newH1, childP); 
+// ㄴ이미 만든 객체를 사용하면 위치가 이동이 됨.
+// ㄴdocument.body.insertBefore(newH11, childP);  
+
+// 요소 제거
+const form = document.querySelector('form'); // <= 요소에 접근하고 싶으면 노드로 획득해야 한다.
+  // ㄴ노드는 요소를 객체 형태로 불러오는 걸 말함.
+document.body.removeChild(form);
