@@ -47,6 +47,22 @@ inputEmail.addEventListener('keyup', (e) => {
   // e.target이 이벤트를 발생한 시점의 객체를 가져옴.
   //ㄴvalue는 input의 내용. 유저가 친 값이 여기 들어감.
 
+  // 이벤트객체
+// const inputEmail = document.querySelector('#email');
+// inputEmail.addEventListener('keyup', (e) => {
+  //   console.log(e.target.value);
+  // });
+// const inputEmail = document.querySelector('#email');
+inputEmail.addEventListener('keyup', (e) => {
+  const regex = /^[0-9]+$/;
+  const label = document.querySelector('#labelEmail');
+  if(!regex.test(e.target.value)) {
+    label.textContent = '숫자만 입력해주세요.';
+  } else {
+    label.textContent = '';
+  }
+});
+
 
 //---------------체크에 따라 비밀번호  
 // 체크박스 접근
