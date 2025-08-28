@@ -12,7 +12,6 @@ writeBtn.addEventListener('click', () => {
       // ㄴ HTML 요소가 JS에 들어가 있는 건 좋지 않음.
       // ㄴ p 태그 안에 class나 여러 속성을 많이 넣을 때 불편함.
       // ㄴ 에밋이 도와주지 않음.
-
     const newP = document.createElement('p');
     newP.textContent = keyword; 
     // ㄴ keyword => keywordInput.value
@@ -20,6 +19,7 @@ writeBtn.addEventListener('click', () => {
     // ㄴ 여기에서만 쓰기 때문에.
     // ㄴ 변수 선언을 하면 그만큼 메모리를 쓰기 때문에 꼭 필요하지 않으면 지우는 게 나음.
     newContent.appendChild(newP);
+    // 취소선 추가하기
     newContent.addEventListener('click', (e) => {
       e.target.classList.toggle('toggle-line-through');
     });
